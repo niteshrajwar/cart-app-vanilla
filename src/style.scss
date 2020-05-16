@@ -1,16 +1,18 @@
+$headerColor: #0000ff;
+$logoColor: yellow;
 #header{
     display: flex;
-    background-color: blue;
+    background-color:$headerColor;
     width: 100%;
     align-items: baseline;
     position: fixed;
 }
 .logo {
   flex: 1;
-  color: yellow;
   margin:5px
 }
 .logo-img{
+    color: $logoColor;
 }
 .logo .nav-links {
     display: flex;
@@ -50,9 +52,6 @@ margin-top: 7%;
     width: 45%;
     margin-left: 5%;
     list-style: none;
-}
-.title{
-
 }
 #shopping-items{
     display: flex;

@@ -1,3 +1,4 @@
+import "./style.scss";
 const items = [
     {
       "id": 9090,
