@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script src="shopping-list.js"></script>
+    <shopping-list item="null" id="list" style="color:green"></shopping-list>
+    <button onClick="bac()">Click me</button>
+    <script src="main.js"></script> -->
+    <link rel="stylesheet" href="../src/style.scss">
+    <section id ="header">
+          <div class="logo">
+            <i class="logo-img fas fa-star"></i>
+          </div>
+          <!-- <nav class="navbar"> -->
+          <ul class="nav-links">
+              <li class="nav-link search">
+                  <input type="text" id="search-bar" placeholder="search" onkeyup="setTimeout(ShoppingList.searchProduct(),1500)">
+              </li>
+              <li class="cart nav-link" href="#cart" onclick="openCartPage()">
+                  <i id="cart-add" class="fas fa-shopping-cart">
+                </i></li>
+          </ul>
+      <!-- </nav> -->
+    </section>
+    <section id ="main-body">
+        <section class="mobile-view">
+        <section class="mob-filter">
+             <a data-toggle="modal" data-target="#filterModal"><i class="icon fas fa-filter"></i>Filter</a>
+        </section>
+        <section class="mob-sort">
+           <a data-toggle="modal" data-target="#sortModal"><i class="icon fas fa-sort"></i>Sort</a>
+        </section>
+        </section>
+        <section id ="filter">
+                  Filter
+        </section>
+        <section id="shopping-list">
+            <section id="sort">
+                <ul class="sort-links">Sort By
+                    <li class="sort-link"><a onClick="ShoppingList.sortItemList(1)">Price--- Low to High</a></li>
+                    <li class="sort-link"><a onClick="ShoppingList.sortItemList(2)">Price--- High to Low</a></li>
+                    <li class="sort-link"><a onClick="ShoppingList.sortItemList(3)">Discount</a></li>
+                </ul>
+            </section>
+            <section id ="shopping-items"></section>
+         </section>
+    </section>
+    <section id="filter-modal" >
+        <div class="modal" id="filterModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">Filter Options</div>
+                <div class="modal-body"></div>
+                <div class="modal-btn modal-footer">
+                    <div data-dismiss="modal">Cancel</div><div id="filterApply" data-dismiss="modal">Apply</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="sort-modal">
+        <div class="modal" id="sortModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">Sort Options</div>
+                <div class="modal-body">
+                    <input type="radio" id="lowtohigh" name="sort" value="1" checked>
+                    <label for="lowtohigh">Price--- Low to High</label><br>
+                    <input type="radio" id="hightolow" name="sort"  value="2">
+                    <label for="hightolow">Price--- High to Low</label><br>
+                    <input type="radio" id="discount"name="sort"  value="3">
+                    <label for="discount">Discount</label><br>
+                </div>
+                <div class="modal-btn modal-footer">
+                    <div data-dismiss="modal">Cancel</div><div id="sortApply" onclick="callSortFunction()" data-dismiss="modal">Apply</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="cart-page">
+    <div id="cart-items">
+
+    </div>
+    <div id="cart-total">
+       
+    </div>
+    </section>
+   <script src="../src/main.js"></script>
+</body>
+</html>
