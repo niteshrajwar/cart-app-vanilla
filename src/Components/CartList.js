@@ -142,7 +142,10 @@ class CartList {
         let removebtn = document.getElementsByClassName('remove');
         for(let i=0;i<removebtn.length;i++) {
           removebtn[i].addEventListener('click',()=>{
-           this.removeItem(removebtn[i].id)
+            if(removebtn[i])
+           CartList.removeItem(removebtn[i].id)
+           else if(removebtn.length > 0) 
+           CartList.removeItem(removebtn[0].id)
           })
         }
       }
@@ -150,7 +153,7 @@ class CartList {
         let increment = document.getElementsByClassName('increment');
         for(let i=0;i<increment.length;i++) {
           increment[i].addEventListener('click',()=>{
-            this.increaseQuantity(increment[i].id)
+            CartList.increaseQuantity(increment[i].id)
           })
         }
       }
@@ -158,7 +161,7 @@ class CartList {
         let decrement = document.getElementsByClassName('decrement');
         for(let i=0;i<decrement.length;i++) {
               decrement[i].addEventListener('click',()=>{
-              this.decreaseQuantity(decrement[i].id)
+              CartList.decreaseQuantity(decrement[i].id)
           })
         }
       }
