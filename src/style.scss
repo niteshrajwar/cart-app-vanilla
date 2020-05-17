@@ -62,6 +62,16 @@ $logoColor: yellow;
   font-weight: 700;
   margin-right: 20px;
 }
+#footer {
+    background-color: $headerColor;
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+   height: 40px;
+}
 #shopping-list {
 width: 80%;
 margin-top: 7%;
