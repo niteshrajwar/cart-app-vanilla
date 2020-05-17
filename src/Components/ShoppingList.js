@@ -5,8 +5,11 @@ class ShoppingList {
         this.setCartCount(JSON.parse(localStorage.getItem("Cart")).length) : null
         : null 
         let list = document.querySelector('#shopping-items');
-         for(let i=0;i<list.childNodes.length;i++) list.removeChild(list.childNodes[i]);
-
+        let child = list.lastElementChild;  
+         while (child) { 
+            list.removeChild(child); 
+            child = list.lastElementChild; 
+        } 
       itemsArray.forEach(item => {
         ShoppingList.addToProductList(item);
       })
