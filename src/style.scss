@@ -1,5 +1,11 @@
 $headerColor: #0000ff;
 $logoColor: yellow;
+@mixin border-box($val: border-box){
+    -webkit-box-sizing: $val;
+    -moz-box-sizing:    $val;
+    box-sizing:         $val;
+}
+
 #header{
     display: flex;
     background-color:$headerColor;
@@ -36,11 +42,25 @@ $logoColor: yellow;
     display: flex;
 }
 #filter{
-    background-color: yellow;
-    width: 20%;
+    width: 25%;
     margin-top: 7%;
+    padding: 2%;
 }
+.active-link {
+    color: $headerColor;
+     text-decoration: underline;
+}
+
+#sort a:active  {
+    color: $headerColor;
+     text-decoration: underline;
+  }
+
 #sort {
+}
+.sort-title {
+  font-weight: 700;
+  margin-right: 20px;
 }
 #shopping-list {
 width: 80%;
@@ -79,7 +99,7 @@ margin-top: 7%;
  width: 100%;
 }
 .addtocartbtn {
-    width: 50%;
+    width: 101px;
     border-radius: 20%;
     margin-left: 10%;
     background-color: yellow;
@@ -199,9 +219,17 @@ display:none
     height: 45%;
     align-items: center;
 }
-.total-price-text{}
-.total-price{}
-.discount-text{}
+.price-text{
+    display: flex;
+    flex-direction: column;
+}
+.total-prices{
+  display: flex;
+  flex-direction: column;
+}
+.total-price{
+    margin-bottom: 10px;
+}
 .discount-price{
     flex-grow: 1;
 }
@@ -213,6 +241,73 @@ display:none
 .net-amount-text, .net-amount{
     font-weight: 700;
 }
+#filterApplyBtn {
+  background-color: $headerColor;
+    color: white;
+    margin-left: 30%;
+    width: 30%;
+    border-radius: 25%;
+    height: 40px;
+}
+.filter-title {
+  font-weight: 700;
+}
+
+
+.content {
+    width: 320px;
+  }
+  
+  .slider {
+      display: block;
+      position: relative;
+      height: 36px;
+      width: 100%;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select:none;
+      -o-user-select:none;
+      user-select:none;
+  
+      .slider-touch-left, .slider-touch-right {
+          @include border-box();
+          display: block;
+          position: absolute;
+          height: 36px;
+          width: 36px;
+          padding: 6px;
+          z-index: 2;
+          
+          span {
+              display: block;
+              width: 100%;
+              height: 100%;
+              background: #F0F0F0;
+              border: 1px solid #A4A4A4;
+              border-radius: 50%;
+          }
+      }  
+      .slider-line {
+          @include border-box();
+          position: absolute;
+          width: calc(#{"100% - 36px"});
+          left: 18px;
+          top: 16px;
+          height: 4px;
+          border-radius: 4px;
+          background: #F0F0F0;
+          z-index: 0;
+          overflow: hidden;
+  
+          span {
+              display: block;
+              height: 100%;
+              width: 0%;
+              background: orange;
+          }
+      }
+  }
+
 @media screen and (max-width:1024px) {
     .cart-count {
         height: 15px;
@@ -237,10 +332,12 @@ display:none
 }
  #shopping-list {
 width: 100%;
+margin-top: 0%;
 }
 .mobile-view{
     display: flex;
     justify-content: space-around;
+    margin-top: 60px
 }
 .mob-filter{
     font-size: 110%;
@@ -293,4 +390,8 @@ width: 100%;
     width:96%;
     margin-top: 15%;
 }
+.content {
+    width: 180px;
 }
+}
+
