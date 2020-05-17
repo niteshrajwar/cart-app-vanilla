@@ -1,5 +1,13 @@
 class ShoppingList {
-    constructor() {}
+    constructor() {
+      this.items = [];
+    }
+    static getItemsArray() {
+      return this.items;
+    }
+    static setItemsArray(items) {
+      this.items = items;
+    }
     static displayList(itemsArray) {
         localStorage.getItem("Cart") ? JSON.parse(localStorage.getItem("Cart")).length > 0 ? 
         this.setCartCount(JSON.parse(localStorage.getItem("Cart")).length) : null
@@ -21,6 +29,7 @@ class ShoppingList {
         })
        let newItemsArray = [...itemsArray]
         ShoppingList.displayList(itemsArray);
+        this.setItemsArray(newItemsArray);
         return newItemsArray;
        }
     static addToProductList(item) {
@@ -114,11 +123,13 @@ static callSortFunction(newItemsArray) {
         }
     }
 }
- static filterItemsArray(newItemsArray,min,max) {
+ static filterItemsArray(min,max) {
+   let newItemsArray = this.getItemsArray();
    newItemsArray = newItemsArray.filter(item => {
     return (item.discountedPrice >= min && item.discountedPrice <=max )
  })
- ShoppingList.displayList(newItemsArray)
+  ShoppingList.displayList(newItemsArray)
+  return newItemsArray;
  }
 }
 export default ShoppingList

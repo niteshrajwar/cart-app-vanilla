@@ -68,12 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   let filterApplyBtn = document.getElementById("filterApplyBtn");
   filterApplyBtn.addEventListener('click', () => {
-    ShoppingList.filterItemsArray(newItemsArray, minPrice, maxPrice)
+   newItemsArray = ShoppingList.filterItemsArray(minPrice, maxPrice)
     cartButtonListener(newItemsArray);
   })
   let filterApply = document.getElementById("filterApply");
   filterApply.addEventListener('click', () => {
-    ShoppingList.filterItemsArray(newItemsArray, minPrice, maxPrice)
+   newItemsArray = ShoppingList.filterItemsArray(minPrice, maxPrice)
     cartButtonListener(newItemsArray);
   })
 });
@@ -82,7 +82,7 @@ function cartButtonListener(newItemsArray) {
   let addtocartbtn = document.getElementsByClassName("addtocartbtn");
   for (let i = 0; i < addtocartbtn.length; i++) {
     addtocartbtn[i].addEventListener('click', () => {
-      ShoppingList.addToCart(addtocartbtn[i].id, newItemsArray)
+       ShoppingList.addToCart(addtocartbtn[i].id, newItemsArray)
     })
   }
 }
