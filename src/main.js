@@ -57,12 +57,12 @@ ShoppingList.callSortFunction(newItemsArray)});
    // ShoppingList.filterItemsArray(newItemsArray,min,max);
      minPrice = min;
     maxPrice = max;
-     document.getElementById('result').innerHTML = 'Min: ' + min + ' Max: ' + max;
+     document.getElementById('result').innerHTML = `Min Price:  <i class="fas fa-rupee-sign">${min}</i>   Max Price:  <i class="fas fa-rupee-sign">${max}</i>`;
    }
    
    newRangeSlider.didChanged = function(min, max)
    {
-     document.getElementById('result').innerHTML = 'Min Price: ' + min + ' Max Price: ' + max;
+     document.getElementById('result').innerHTML = `Min Price:  <i class="fas fa-rupee-sign">${min}</i>   Max Price:  <i class="fas fa-rupee-sign">${max}</i>`;
    }
   // ///////////////////////////////////////////////////////////////////////////////////////////////
    var newRangeSliderModal = new ZBRangeSlider('modal-slider');
@@ -71,12 +71,12 @@ ShoppingList.callSortFunction(newItemsArray)});
    {
     minPrice = min;
     maxPrice = max;
-     document.getElementById('result-modal').innerHTML = 'Min: ' + min + ' Max: ' + max;
+     document.getElementById('result-modal').innerHTML = `Min Price:  <i class="fas fa-rupee-sign">${min}</i>   Max Price:  <i class="fas fa-rupee-sign">${max}</i>`;
    }
    
    newRangeSliderModal.didChanged = function(min, max)
    {
-     document.getElementById('result-modal').innerHTML = 'Min Price: ' + min + ' Max Price: ' + max;
+     document.getElementById('result-modal').innerHTML = `Min Price:  <i class="fas fa-rupee-sign">${min}</i>   Max Price:  <i class="fas fa-rupee-sign">${max}</i>`;
    }
    let filterApplyBtn = document.getElementById("filterApplyBtn");
    filterApplyBtn.addEventListener('click',() => {
