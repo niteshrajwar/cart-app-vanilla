@@ -41,15 +41,15 @@ class ShoppingList {
         let totalSection = document.querySelector("#cart-total");
         totalSection.style.display = "none";
         let div = document.createElement('div');
-        div.className = "product-container";
+        div.className = "product__container";
         div.id = item.id;
         div.innerHTML = `
-         <div class="product-image-container"><img alt="No preview Available" class="product-image" src=${item.img_url}></div>
-         <div class="product-name">${item.name}</div>
+         <div class="product__image__container"><img alt="No preview Available" class="product__image" src=${item.img_url}></div>
+         <div class="product__name">${item.name}</div>
          <div class="prices">
-         <div class="discount-price"><i class="fas fa-rupee-sign">${item.discountedPrice}</i></div>
-         <div class="product-price">${item.price}</div>
-         <div class="discount-percentage">${item.discount} % Off</div>
+         <div class="discount__price"><i class="fas fa-rupee-sign">${item.discountedPrice}</i></div>
+         <div class="product__price">${item.price}</div>
+         <div class="discount__percentage">${item.discount} % Off</div>
          </div>
          <button class="addtocartbtn" id=${item.id}>Add to Cart</button>
         `
@@ -110,7 +110,7 @@ class ShoppingList {
     }
      let input = document.createElement('input');
      input.type="text";
-     input.className = "cart-count";
+     input.className = "cart__count";
      input.value = cartLength
      cartAdd.appendChild(input);
 }

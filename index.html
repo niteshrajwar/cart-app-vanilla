@@ -23,7 +23,7 @@
         </section>
         </section>
         <section id ="filter">
-            <div class="filter-title">Filters</div>
+            <div class="filter__title">Filters</div>
                   <div class="content">
                     <div id="my-slider" se-min="0" se-step="1" se-min-value="0" se-max-value="1000" se-max="1000" class="slider">
                       <div class="slider-touch-left">
@@ -42,17 +42,17 @@
         </section>
         <section id="shopping-list">
             <section id="sort">
-                <ul class="sort-links"><span class="sort-title">Sort By</span>
-                    <li class="sort-link"><a id="sortLowToHigh" >Price--- Low to High</a></li>
-                    <li class="sort-link"><a id="sortHighToLow">Price--- High to Low</a></li>
-                    <li class="sort-link"><a id="sortDiscount">Discount</a></li>
+                <ul class="sort__links"><span class="sort__title">Sort By</span>
+                    <li class="sort__link"><a id="sortLowToHigh" >Price--- Low to High</a></li>
+                    <li class="sort__link"><a id="sortHighToLow">Price--- High to Low</a></li>
+                    <li class="sort__link"><a id="sortDiscount">Discount</a></li>
                 </ul>
             </section>
             <section id ="shopping-items"></section>
          </section>
     </section>
     <section id="filter-modal" >
-        <div class="modal" id="filterModal">
+        <div class="filter__modal modal" id="filterModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">Filter Options</div>
@@ -72,7 +72,7 @@
                       </div>
                       <div id="result-modal">Min: 0 Max: 1000</div>
                 </div>
-                <div class="modal-btn modal-footer">
+                <div class="modal__btn modal__footer">
                     <div data-dismiss="modal">Cancel</div><div id="filterApply" data-dismiss="modal">Apply</div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                     <input type="radio" id="discount"name="sort"  value="3">
                     <label for="discount">Discount</label><br>
                 </div>
-                <div class="modal-btn modal-footer">
+                <div class="modal__btn modal__footer">
                     <div data-dismiss="modal">Cancel</div><div id="sortApply" data-dismiss="modal">Apply</div>
                 </div>
             </div>

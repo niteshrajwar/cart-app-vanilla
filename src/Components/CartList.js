@@ -64,19 +64,19 @@ class CartList {
       discount += element.discount*element.quantity
     })
         div.innerHTML = `
-        <div class="total-header">PRICE DETAILS</div>
-        <div class="total-body">
-        <div class="price-text">
-        <div class="total-price-text">Price(${cartItemArray.length} items) :</div>
-        <div class="discount-text">Discount :</div>
+        <div class="total__header">PRICE DETAILS</div>
+        <div class="total__body">
+        <div class="price__text">
+        <div class="total__price__text">Price(${cartItemArray.length} items) :</div>
+        <div class="discount__text">Discount :</div>
         </div>
-        <div class="total-prices">
-        <div class="total-price"><i class="fas fa-rupee-sign">${totalPrice}</i></div>
-        <div class="discount-price"><i class="fas fa-rupee-sign">${discount}</i></div>
+        <div class="total__prices">
+        <div class="total__price"><i class="fas fa-rupee-sign">${totalPrice}</i></div>
+        <div class="discount__price"><i class="fas fa-rupee-sign">${discount}</i></div>
         </div>
         </div>
-        <div class="total-footer">
-        <div class="net-amount-text">Total Payable :</div><div class="net-amount"><i class="fas fa-rupee-sign">${totalPrice-discount}</i></div>
+        <div class="total__footer">
+        <div class="net__amount__text">Total Payable :</div><div class="net__amount"><i class="fas fa-rupee-sign">${totalPrice-discount}</i></div>
         </div>`
         totalSection.appendChild(div);   
     } else {
@@ -109,23 +109,23 @@ class CartList {
             list.removeChild(prevDiv);
             }
             let div = document.createElement('div');
-            div.className = "cart-container";
+            div.className = "cart__container";
             div.id = "cart" + cartItem.id;
             div.innerHTML = `
-             <div class="cart-image-container"><img class="product-image" src=${cartItem.img_url}></div>
-             <div class="cart-details">
-             <div class="product-name">${cartItem.name}</div>
-             <div class="rest-details">
-             <div class="cart-prices">
-             <div class="discount-price"><i class="fas fa-rupee-sign">${cartItem.discountedPrice}</i></div>
-             <div class="product-price">${cartItem.price}</div>
-             <div class="discount-percentage">${cartItem.discount} % Off</div>
+             <div class="cart__image__container"><img class="product__image" src=${cartItem.img_url}></div>
+             <div class="cart__details">
+             <div class="product__name">${cartItem.name}</div>
+             <div class="rest__details">
+             <div class="cart__prices">
+             <div class="discount__price"><i class="fas fa-rupee-sign">${cartItem.discountedPrice}</i></div>
+             <div class="product__price">${cartItem.price}</div>
+             <div class="discount__percentage">${cartItem.discount} % Off</div>
              </div>
-             <div class="quantity-control">
+             <div class="quantity__control">
             <button class="decrement" id=${cartItem.id}>-</button>
           <input class="box" value = ${cartItem.quantity} type="text" readonly>
           <button class="increment" id=${cartItem.id}>+</button></div>
-          <div class="remove-div">
+          <div class="remove__div">
           <a class="remove" id=${cartItem.id}>REMOVE</a></div> 
           </div>  
           </div>        

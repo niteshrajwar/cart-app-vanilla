@@ -4,6 +4,7 @@ import ShoppingList from './Components/ShoppingList'
 import CartList from './Components/CartList'
 import items from './data';
 import ZBRangeSlider from './Components/filter'
+import ZBRangeSliderMobile from './Components/filterMobile';
 
 let newItemsArray = [];
 let headerSection = document.getElementById("header");
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   sortbtn.addEventListener('click', () => {
     ShoppingList.callSortFunction(newItemsArray)
   });
-  let cartLink = document.getElementById("cart-link");
+  let cartLink = document.getElementById("cart__link");
   cartLink.addEventListener('click', CartList.openCartPage);
   let sortHighToLow = document.getElementById("sortHighToLow");
   let sortLowToHigh = document.getElementById("sortLowToHigh");
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('result').innerHTML = `Min Price:  <i class="fas fa-rupee-sign">${min}</i>   Max Price:  <i class="fas fa-rupee-sign">${max}</i>`;
   }
   // ///////////////////////////////////////////////////////////////////////////////////////////////
-  var newRangeSliderModal = new ZBRangeSlider('modal-slider');
+  var newRangeSliderModal = new ZBRangeSliderMobile('modal-slider');
 
   newRangeSliderModal.onChange = function (min, max) {
     minPrice = min;
