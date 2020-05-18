@@ -109,24 +109,24 @@ class CartList {
             list.removeChild(prevDiv);
             }
             let div = document.createElement('div');
-            div.className = "cart__container";
+            div.className = "cart";
             div.id = "cart" + cartItem.id;
             div.innerHTML = `
-             <div class="cart__image__container"><img class="product__image" src=${cartItem.img_url}></div>
+             <div class="cart__image-container"><img class="product__image-container__product-image" src=${cartItem.img_url}></div>
              <div class="cart__details">
              <div class="product__name">${cartItem.name}</div>
              <div class="rest__details">
              <div class="cart__prices">
              <div class="discount__price"><i class="fas fa-rupee-sign">${cartItem.discountedPrice}</i></div>
-             <div class="product__price">${cartItem.price}</div>
-             <div class="discount__percentage">${cartItem.discount} % Off</div>
+             <div class="product__prices__price">${cartItem.price}</div>
+             <div class="product__prices__discount-percentage">${cartItem.discount} % Off</div>
              </div>
-             <div class="quantity__control">
-            <button class="decrement" id=${cartItem.id}>-</button>
-          <input class="box" value = ${cartItem.quantity} type="text" readonly>
-          <button class="increment" id=${cartItem.id}>+</button></div>
-          <div class="remove__div">
-          <a class="remove" id=${cartItem.id}>REMOVE</a></div> 
+             <div class="cart__quantity__control">
+            <button class="cart__quantity__control__decrement" id=${cartItem.id}>-</button>
+          <input class="cart__quantity__control__box" value = ${cartItem.quantity} type="text" readonly>
+          <button class="cart__quantity__control__increment" id=${cartItem.id}>+</button></div>
+          <div class="cart__remove-div">
+          <a class="cart__remove-div__remove" id=${cartItem.id}>REMOVE</a></div> 
           </div>  
           </div>        
             `
@@ -139,7 +139,7 @@ class CartList {
     CartList.cartTotal(); 
     }
     static removeCartItemButtonClick() {
-        let removebtn = document.getElementsByClassName('remove');
+        let removebtn = document.getElementsByClassName('cart__remove-div__remove');
         for(let i=0;i<removebtn.length;i++) {
           removebtn[i].addEventListener('click',()=>{
             if(removebtn[i])
@@ -150,7 +150,7 @@ class CartList {
         }
       }
       static increaseQuantityButtonClick() {
-        let increment = document.getElementsByClassName('increment');
+        let increment = document.getElementsByClassName('cart__quantity__control__increment');
         for(let i=0;i<increment.length;i++) {
           increment[i].addEventListener('click',()=>{
             CartList.increaseQuantity(increment[i].id)
@@ -158,7 +158,7 @@ class CartList {
         }
       }
       static decreaseQuantityButtonClick() {
-        let decrement = document.getElementsByClassName('decrement');
+        let decrement = document.getElementsByClassName('cart__quantity__control__decrement');
         for(let i=0;i<decrement.length;i++) {
               decrement[i].addEventListener('click',()=>{
               CartList.decreaseQuantity(decrement[i].id)

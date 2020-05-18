@@ -41,17 +41,17 @@ class ShoppingList {
         let totalSection = document.querySelector("#cart-total");
         totalSection.style.display = "none";
         let div = document.createElement('div');
-        div.className = "product__container";
+        div.className = "product";
         div.id = item.id;
         div.innerHTML = `
-         <div class="product__image__container"><img alt="No preview Available" class="product__image" src=${item.img_url}></div>
+         <div class="product__image-container"><img alt="No preview Available" class="product__image-container__product-image" src=${item.img_url}></div>
          <div class="product__name">${item.name}</div>
-         <div class="prices">
-         <div class="discount__price"><i class="fas fa-rupee-sign">${item.discountedPrice}</i></div>
-         <div class="product__price">${item.price}</div>
-         <div class="discount__percentage">${item.discount} % Off</div>
+         <div class="product__prices">
+         <div class="product__prices__dicount"><i class="fas fa-rupee-sign">${item.discountedPrice}</i></div>
+         <div class="product__prices__price">${item.price}</div>
+         <div class="product__prices__discount-percentage">${item.discount} % Off</div>
          </div>
-         <button class="addtocartbtn" id=${item.id}>Add to Cart</button>
+         <button class="product__addtocartbtn" id=${item.id}>Add to Cart</button>
         `
         list.appendChild(div);
     }

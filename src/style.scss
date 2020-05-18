@@ -35,7 +35,7 @@ $logoColor: yellow;
 .nav__link{
     margin-right: 20%;
 }
-.cart {
+.btn-cart {
     color: white;
 }
 #main-body {
@@ -86,27 +86,27 @@ margin-top: 7%;
     display: flex;
     flex-wrap: wrap;
 }
-.product__container {
+.product {
     width: 270px;
     display: flex;
     flex-direction: column;
     padding: 1%;
 }
-.product__image__container {
+.product__image-container {
     width: 100%;
 }
 .product__name{
     width: 100%;
     font-weight: 700;
 }
-.product__price{
+.product__prices__price{
  text-decoration: line-through;
  flex-grow: 1;
 }
-.product__image{
+.product__image-container__product-image{
  width: 100%;
 }
-.addtocartbtn {
+.product__addtocartbtn {
     width: 101px;
     border-radius: 20%;
     margin-left: 10%;
@@ -137,16 +137,25 @@ display:none
  font-weight: 800;
  flex-grow: 1;
 }
+.product__prices__dicount{
+    font-weight: 800;
+    flex-grow: 1;
+}
 .discount__percentage {
     font-weight: 800;
     color: #44c823;
     flex-grow: 1;
 }
-.prices{
+.product__prices__discount-percentage{
+    font-weight: 800;
+    color: #44c823;
+    flex-grow: 1;
+}
+.product__prices{
     display: flex;
     justify-content: space-between;
 }
-.cart__image__container {
+.cart__image-container {
     width: 200px;
     margin: 1%;
 }
@@ -178,7 +187,7 @@ display:none
     align-items: baseline;
 }
 
-.cart__container{
+.cart{
     display: flex;
     padding: 0%;
     border: solid 1px;
@@ -186,19 +195,19 @@ display:none
     width: 100%;
     height: 220px
 }
-.quantity__control {
+.cart__quantity__control {
     width: 220px;
 }
-.box{
+.cart__quantity__control__box{
     width: 20%;
     text-align: center;
     font-weight: 800;
 }
-.remove__div{
+.cart__quantity__control__remove-div{
     font-weight: 700;
     cursor: pointer;
 }
-.increment ,.decrement {
+.cart__quantity__control__increment ,.cart__quantity__control__decrement {
     cursor: pointer;
     border-radius: 50%;
     background-color: white;
@@ -350,17 +359,17 @@ margin-top: 0%;
     justify-content: space-around;
     margin-top: 60px
 }
-.mob-filter{
+.mobile-view__filter{
     font-size: 110%;
     font-weight: 600;
     padding: 2%
 }
-.mob-sort{
+.mobile-view__sort{
     font-size: 110%;
     font-weight: 600;
     padding: 2%
 }
-.product__container {
+.product {
     width: 47%;
     display: flex;
     flex-direction: column;

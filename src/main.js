@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function cartButtonListener(newItemsArray) {
-  let addtocartbtn = document.getElementsByClassName("addtocartbtn");
+  let addtocartbtn = document.getElementsByClassName("product__addtocartbtn");
   for (let i = 0; i < addtocartbtn.length; i++) {
     addtocartbtn[i].addEventListener('click', () => {
        ShoppingList.addToCart(addtocartbtn[i].id, newItemsArray)

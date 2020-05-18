@@ -6,7 +6,7 @@ const header = () => {
     <li class="nav__link search">
         <input type="text" id="search-bar" placeholder="search">
     </li>
-    <li id="cart__link" class="cart nav__link" href="#cart">
+    <li id="cart__link" class="btn-cart nav__link" href="#cart">
         <i id="cart-add" class="fas fa-shopping-cart">
       </i></li>
 </ul>`
