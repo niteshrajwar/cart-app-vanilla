@@ -44,8 +44,8 @@
         <section id="shopping-list">
             <section id="sort">
                 <ul class="sort__links"><span class="sort__title">Sort By</span>
+                  <li class="sort__link"><a id="sortHighToLow">Price--- High to Low</a></li>
                     <li class="sort__link"><a id="sortLowToHigh" >Price--- Low to High</a></li>
-                    <li class="sort__link"><a id="sortHighToLow">Price--- High to Low</a></li>
                     <li class="sort__link"><a id="sortDiscount">Discount</a></li>
                 </ul>
             </section>
@@ -86,10 +86,10 @@
             <div class="modal-content">
                 <div class="modal-header">Sort Options</div>
                 <div class="modal-body">
+                  <input type="radio" id="hightolow" name="sort"  value="2">
+                    <label for="hightolow">Price--- High to Low</label><br>
                     <input type="radio" id="lowtohigh" name="sort" value="1" checked>
                     <label for="lowtohigh">Price--- Low to High</label><br>
-                    <input type="radio" id="hightolow" name="sort"  value="2">
-                    <label for="hightolow">Price--- High to Low</label><br>
                     <input type="radio" id="discount"name="sort"  value="3">
                     <label for="discount">Discount</label><br>
                 </div>
