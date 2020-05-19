@@ -8,6 +8,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+  
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"  media="screen">
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
   <link rel="stylesheet" href="dist/style.css">
     <title>Cart App</title>
 </head>
@@ -63,30 +74,24 @@
     <section id="filter-modal" >
         <div class="filter__modal modal" id="filterModal">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="div__slider modal-content">
                 <div class="modal-header">Filter Options</div>
                 <div class="modal-body">
-                  <!-- <div class="filter__body">
-
-                  </div> -->
-                  <div id="result__modal__filter">
-                    <div id="result__modal__min"> <i class="fas fa-rupee-sign">0</i></div>
-                    <div id="result__modal__max"><i class="fas fa-rupee-sign">1000</i></div>
-                    </div>
-                    <div class="content">
-                        <div id="modal-slider" se-min="0" se-step="1" se-min-value="10" se-max-value="800" se-max="1000" class="slider">
-                     
-                          <div class="slider-touch-left">
-                            <span></span>
-                          </div>
-                          <div class="slider-touch-right">
-                            <span></span>
-                          </div>
-                          <div class="slider-line">
-                            <span></span>
-                          </div>
-                        </div>
-                      </div>
+              
+                  
+                    <div  data-role="page">                 
+                      <!-- <div data-role="main" class="ui-content">  -->
+                          <div  data-role="rangeslider">
+                            <!-- <div id="result__modal__filter">
+                              <div id="result__modal__min"> <i class="fas fa-rupee-sign">0</i></div>
+                              <div id="result__modal__max"><i class="fas fa-rupee-sign">1000</i></div>
+                              </div> -->
+                              <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
+                              <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
+                            </div>
+                     </div>
+                     <!-- </div> -->
+                     <div class="filter__price-title"> Prices</div>
                 </div>
                 <div class="modal__btn modal__footer">
                     <div data-dismiss="modal">Cancel</div><div id="filterApply" data-dismiss="modal">Apply</div>

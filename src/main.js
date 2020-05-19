@@ -4,7 +4,6 @@ import ShoppingList from './Components/ShoppingList'
 import CartList from './Components/CartList'
 import items from './data';
 import ZBRangeSlider from './Components/filter'
-import ZBRangeSliderMobile from './Components/filterMobile';
 
 let newItemsArray = [];
 let headerSection = document.getElementById("header");
@@ -58,20 +57,20 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('result-max').innerHTML = `<i class="fas fa-rupee-sign">${max}</i>`;
   }
   // ///////////////////////////////////////////////////////////////////////////////////////////////
-  var newRangeSliderModal = new ZBRangeSliderMobile('modal-slider');
+  // var newRangeSliderModal = new ZBRangeSliderMobile('modal-slider');
 
-  newRangeSliderModal.onChange = function (min, max) {
-    minPrice = min;
-    maxPrice = max;
-    document.getElementById('result__modal__min').innerHTML = `<i class="fas fa-rupee-sign">${min}</i> `;
-    document.getElementById('result__modal__max').innerHTML = `<i class="fas fa-rupee-sign">${max}</i>`;
+  // newRangeSliderModal.onChange = function (min, max) {
+  //   minPrice = min;
+  //   maxPrice = max;
+  //   document.getElementById('result__modal__min').innerHTML = `<i class="fas fa-rupee-sign">${min}</i> `;
+  //   document.getElementById('result__modal__max').innerHTML = `<i class="fas fa-rupee-sign">${max}</i>`;
     
-  }
+  // }
 
-  newRangeSliderModal.didChanged = function (min, max) {
-    document.getElementById('result__modal__min').innerHTML = `<i class="fas fa-rupee-sign">${min}</i> `;
-    document.getElementById('result__modal__max').innerHTML = `<i class="fas fa-rupee-sign">${max}</i>`;
-  }
+  // newRangeSliderModal.didChanged = function (min, max) {
+  //   document.getElementById('result__modal__min').innerHTML = `<i class="fas fa-rupee-sign">${min}</i> `;
+  //   document.getElementById('result__modal__max').innerHTML = `<i class="fas fa-rupee-sign">${max}</i>`;
+  // }
   let filterApplyBtn = document.getElementById("filterApplyBtn");
   filterApplyBtn.addEventListener('click', () => {
    newItemsArray = ShoppingList.filterItemsArray(minPrice, maxPrice)
@@ -79,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   let filterApply = document.getElementById("filterApply");
   filterApply.addEventListener('click', () => {
+    let minPrice = document.getElementById('price-min').value;
+    let maxPrice = document.getElementById('price-max').value;
    newItemsArray = ShoppingList.filterItemsArray(minPrice, maxPrice)
     cartButtonListener(newItemsArray);
   })
@@ -91,5 +92,6 @@ function cartButtonListener(newItemsArray) {
        ShoppingList.addToCart(addtocartbtn[i].id, newItemsArray)
     })
   }
+ 
 }
 
