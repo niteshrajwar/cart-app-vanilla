@@ -97,7 +97,7 @@ class ShoppingList {
     let newItems = [...newItemsArray];
     if(searchKey && searchKey !== '') {
         newItems = newItems.filter(item => {
-        return item.name.toLowerCase() === searchKey.toLowerCase()
+        return item.name.toLowerCase().includes(searchKey.toLowerCase());
       })
     }
     ShoppingList.displayList(newItems)

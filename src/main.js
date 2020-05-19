@@ -49,11 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // ShoppingList.filterItemsArray(newItemsArray,min,max);
     minPrice = min;
     maxPrice = max;
-    document.getElementById('result').innerHTML = `Min Price:  <i class="fas fa-rupee-sign">${min}</i>   Max Price:  <i class="fas fa-rupee-sign">${max}</i>`;
+    document.getElementById('result-min').innerHTML = `<i class="fas fa-rupee-sign">${min}</i> `;
+    document.getElementById('result-max').innerHTML = `<i class="fas fa-rupee-sign">${max}</i>`;
   }
 
   newRangeSlider.didChanged = function (min, max) {
-    document.getElementById('result').innerHTML = `Min Price:  <i class="fas fa-rupee-sign">${min}</i>   Max Price:  <i class="fas fa-rupee-sign">${max}</i>`;
+    document.getElementById('result-min').innerHTML = `<i class="fas fa-rupee-sign">${min}</i> `;
+    document.getElementById('result-max').innerHTML = `<i class="fas fa-rupee-sign">${max}</i>`;
   }
   // ///////////////////////////////////////////////////////////////////////////////////////////////
   var newRangeSliderModal = new ZBRangeSliderMobile('modal-slider');
@@ -61,11 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
   newRangeSliderModal.onChange = function (min, max) {
     minPrice = min;
     maxPrice = max;
-    document.getElementById('result-modal').innerHTML = `Min Price:  <i class="fas fa-rupee-sign">${min}</i>   Max Price:  <i class="fas fa-rupee-sign">${max}</i>`;
+    document.getElementById('result__modal__min').innerHTML = `<i class="fas fa-rupee-sign">${min}</i> `;
+    document.getElementById('result__modal__max').innerHTML = `<i class="fas fa-rupee-sign">${max}</i>`;
+    
   }
 
   newRangeSliderModal.didChanged = function (min, max) {
-    document.getElementById('result-modal').innerHTML = `Min Price:  <i class="fas fa-rupee-sign">${min}</i>   Max Price:  <i class="fas fa-rupee-sign">${max}</i>`;
+    document.getElementById('result__modal__min').innerHTML = `<i class="fas fa-rupee-sign">${min}</i> `;
+    document.getElementById('result__modal__max').innerHTML = `<i class="fas fa-rupee-sign">${max}</i>`;
   }
   let filterApplyBtn = document.getElementById("filterApplyBtn");
   filterApplyBtn.addEventListener('click', () => {

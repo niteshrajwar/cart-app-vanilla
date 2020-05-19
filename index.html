@@ -8,12 +8,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="dist/style.css">
     <title>Cart App</title>
 </head>
 <body>
-    <link rel="stylesheet" href="dist/style.css">
-    <section id ="header">
-    </section>
+   
+    <header id ="header">
+    </header>
     <section id ="main-body">
         <section class="mobile-view">
         <section class="mobile-view__filter">
@@ -25,11 +26,18 @@
         </section>
         <section id ="filter">
             <div class="filter__title">Filters</div>
+            <div id="result__filter">
+            <div id="result-min"> <i class="fas fa-rupee-sign">0</i></div>
+            <div id="result-max"><i class="fas fa-rupee-sign">1000</i></div>
+          </div>
                   <div class="content">
                     <div id="my-slider" se-min="0" se-step="1" se-min-value="0" se-max-value="1000" se-max="1000" class="slider">
+                     
                       <div class="slider-touch-left">
+                      
                         <span></span>
                       </div>
+                      
                       <div class="slider-touch-right">
                         <span></span>
                       </div>
@@ -38,7 +46,7 @@
                       </div>
                     </div>
                   </div>
-                  <div id="result">Min Price: <i class="fas fa-rupee-sign">0</i> Max Price: <i class="fas fa-rupee-sign">1000</i></div>
+                  <div class="filter__price-title"> Prices</div>
                   <button id="filterApplyBtn">Apply</button>
         </section>
         <section id="shopping-list">
@@ -58,8 +66,16 @@
             <div class="modal-content">
                 <div class="modal-header">Filter Options</div>
                 <div class="modal-body">
+                  <!-- <div class="filter__body">
+
+                  </div> -->
+                  <div id="result__modal__filter">
+                    <div id="result__modal__min"> <i class="fas fa-rupee-sign">0</i></div>
+                    <div id="result__modal__max"><i class="fas fa-rupee-sign">1000</i></div>
+                    </div>
                     <div class="content">
                         <div id="modal-slider" se-min="0" se-step="1" se-min-value="10" se-max-value="800" se-max="1000" class="slider">
+                     
                           <div class="slider-touch-left">
                             <span></span>
                           </div>
@@ -71,7 +87,6 @@
                           </div>
                         </div>
                       </div>
-                      <div id="result-modal">Min: 0 Max: 1000</div>
                 </div>
                 <div class="modal__btn modal__footer">
                     <div data-dismiss="modal">Cancel</div><div id="filterApply" data-dismiss="modal">Apply</div>
